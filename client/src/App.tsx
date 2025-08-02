@@ -8,6 +8,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Background from "@/components/background";
 import Home from "@/pages/home";
+import About from "@/pages/about";
 import Vision from "@/pages/vision";
 import Pillars from "@/pages/pillars";
 import Budget from "@/pages/budget";
@@ -22,6 +23,7 @@ function Router() {
       <main className="pt-28 pb-16">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
           <Route path="/vision" component={Vision} />
           <Route path="/pillars" component={Pillars} />
           <Route path="/budget" component={Budget} />

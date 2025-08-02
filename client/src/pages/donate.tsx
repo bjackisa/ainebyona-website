@@ -63,7 +63,7 @@ export default function Donate() {
   const handleCopy = async (text: string, type: string) => {
     try {
       await copyToClipboard(text);
-      setCopiedItems(prev => new Set([...prev, type]));
+      setCopiedItems(prev => new Set(Array.from(prev).concat([type])));
       toast({
         title: "Copied!",
         description: `${type} copied to clipboard`,
@@ -71,7 +71,7 @@ export default function Donate() {
       
       setTimeout(() => {
         setCopiedItems(prev => {
-          const newSet = new Set(prev);
+          const newSet = new Set(Array.from(prev));
           newSet.delete(type);
           return newSet;
         });
@@ -255,9 +255,22 @@ export default function Donate() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gradient mb-6">Support Our Campaign</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Join the movement to light up the youth nation. Every contribution makes a difference in empowering the next generation of leaders.
             </p>
+            <div className="flex justify-center items-center space-x-8 mb-8">
+              <div className="glass rounded-xl p-4 flex items-center space-x-3">
+                <img
+                  src="https://res.cloudinary.com/dsijcu1om/image/upload/v1754123630/PPF_1_o24vph.jpg"
+                  alt="PFF Party Logo"
+                  className="w-8 h-8 object-contain"
+                />
+                <span className="font-semibold text-primary">People's Front for Freedom</span>
+              </div>
+              <div className="glass rounded-xl p-4">
+                <span className="font-semibold text-gray-800">Western Youth MP 2026-2031</span>
+              </div>
+            </div>
           </div>
 
           <div className="glass rounded-3xl p-8 max-w-2xl mx-auto">
@@ -315,18 +328,28 @@ export default function Donate() {
                   onValueChange={(value) => form.setValue("paymentMethod", value as "mobile_money" | "bank_transfer")}
                   className="grid md:grid-cols-2 gap-4 mt-2"
                 >
-                  <Label className="flex items-center space-x-3 p-4 rounded-xl border-2 border-gray-200 hover:border-primary cursor-pointer transition-colors glass hover-glass">
+                  <Label className="flex items-center space-x-3 p-6 rounded-xl border-2 border-gray-200 hover:border-primary cursor-pointer transition-all duration-300 glass hover-glass transform hover:scale-105">
                     <RadioGroupItem value="mobile_money" />
-                    <div>
-                      <p className="font-semibold text-gray-800">Mobile Money</p>
-                      <p className="text-sm text-gray-600">Airtel Money & MTN MoMo Pay</p>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-yellow-500 rounded-xl flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">MM</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-800">Mobile Money</p>
+                        <p className="text-sm text-gray-600">Airtel Money & MTN MoMo Pay</p>
+                      </div>
                     </div>
                   </Label>
-                  <Label className="flex items-center space-x-3 p-4 rounded-xl border-2 border-gray-200 hover:border-primary cursor-pointer transition-colors glass hover-glass">
+                  <Label className="flex items-center space-x-3 p-6 rounded-xl border-2 border-gray-200 hover:border-primary cursor-pointer transition-all duration-300 glass hover-glass transform hover:scale-105">
                     <RadioGroupItem value="bank_transfer" />
-                    <div>
-                      <p className="font-semibold text-gray-800">Bank Transfer</p>
-                      <p className="text-sm text-gray-600">Stanbic Bank & Pride Bank</p>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-800 rounded-xl flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">BT</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-800">Bank Transfer</p>
+                        <p className="text-sm text-gray-600">Stanbic Bank & Pride Bank</p>
+                      </div>
                     </div>
                   </Label>
                 </RadioGroup>
@@ -408,11 +431,16 @@ export default function Donate() {
               {/* Generate Reference Button */}
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="w-full bg-gradient-to-r from-primary to-blue-800 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 <Key className="w-5 h-5 mr-2" />
-                Generate Reference Code
+                Generate Payment Instructions
               </Button>
+              
+              <div className="text-center mt-4 text-sm text-gray-600">
+                <p>💙 Thank you for supporting the PFF movement</p>
+                <p>Your contribution helps empower Western Youth</p>
+              </div>
             </form>
           </div>
 

@@ -1,8 +1,8 @@
-# Campaign Website - Ainebyona Nicholas for Western Youth MP
+# Ainebyona for Western Youth MP - Official Campaign Website
 
 ## Overview
 
-This is a political campaign website for Ainebyona Nicholas, running for Western Youth MP 2026-2031 with the slogan "Lighting the Youth Nation". The application is a full-stack web platform built with React/TypeScript on the frontend and Express.js on the backend, designed to showcase the candidate's vision, strategic pillars, campaign budget, and facilitate donations. The site features a modern, responsive design with glassmorphism effects and professional political branding.
+This is the official political campaign website for Ainebyona Nicholas, representing the People's Front for Freedom (PFF) party as the Western Youth Member of Parliament candidate for 2026-2031. The slogan "Lighting the Youth Nation" embodies the campaign's mission to empower young leaders across Western Uganda. Built with React/TypeScript frontend and Express.js backend, the platform showcases the candidate's background, vision, strategic pillars, transparent budget breakdown, and provides a comprehensive donation system. The design features glassmorphism effects with PFF party colors (dark blue and white) for professional political branding that maintains party allegiance.
 
 ## User Preferences
 
@@ -38,16 +38,19 @@ Preferred communication style: Simple, everyday language.
 - **Validation**: Zod schemas for type-safe form validation and API request/response validation
 
 ### UI/UX Design System
-- **Design Language**: Modern glassmorphism with political campaign theming
-- **Color Scheme**: Blue, purple, and yellow gradient theme with neutral base
-- **Typography**: System font stack with careful hierarchy
+- **Design Language**: Modern glassmorphism with PFF party political branding
+- **Color Scheme**: PFF party colors - Dark Blue (primary) and White (secondary) maintaining party allegiance
+- **Typography**: System font stack with careful hierarchy and party-appropriate styling
 - **Responsive Design**: Mobile-first approach with Tailwind responsive utilities
-- **Animation**: CSS transitions and transforms for interactive elements
+- **Animation**: CSS transitions, transforms, and floating effects for enhanced user engagement
+- **Visual Elements**: Official candidate photos, party logos, and parliament artwork integration
 
 ### Campaign Data Management
-- **Content Structure**: Centralized campaign data including candidate information, strategic pillars, budget breakdown, and donation purposes
+- **Content Structure**: Comprehensive candidate biography, PFF party affiliation, strategic pillars, budget breakdown, and donation purposes
+- **Candidate Information**: Official photos, educational background, current leadership roles, and professional credentials
+- **Party Integration**: PFF logo, party colors, and political alignment throughout the platform
 - **Financial Transparency**: Detailed budget breakdown with percentage allocations and visual progress indicators
-- **Contact Information**: Multiple contact methods including phone numbers and email
+- **Contact Information**: Multiple contact methods and party-branded communication elements
 
 ### Donation System
 - **Payment Methods**: Mobile money (Airtel/MTN) and bank transfer (Stanbic/Pride) integration

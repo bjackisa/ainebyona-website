@@ -8,6 +8,7 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     { href: "/vision", label: "Vision" },
     { href: "/pillars", label: "Pillars" },
     { href: "/budget", label: "Budget" },
@@ -19,12 +20,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-800 rounded-xl flex items-center justify-center text-white font-bold">
               AN
             </div>
             <div>
-              <h1 className="text-lg font-bold text-gray-800">Ainebyona Nicholas</h1>
-              <p className="text-xs text-gray-600">Western Youth MP 2026-2031</p>
+              <h1 className="text-lg font-bold text-gray-800">Ainebyona for Western Youth MP</h1>
+              <p className="text-xs text-primary font-semibold">PFF • 2026-2031</p>
             </div>
           </Link>
           

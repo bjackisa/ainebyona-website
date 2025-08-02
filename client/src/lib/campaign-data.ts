@@ -2,8 +2,29 @@ export const campaignData = {
   candidate: {
     name: "Ainebyona Nicholas",
     position: "Western Youth MP 2026–2031",
+    party: "PFF (People's Front for Freedom)",
     phones: ["0773695668", "0759070886"],
-    email: "ainenicholas3@gmail.com"
+    email: "ainenicholas3@gmail.com",
+    photo: "https://res.cloudinary.com/dsijcu1om/image/upload/v1754123632/dd8425a3971845c5be5d5584ee2d1709_gmdck0.webp",
+    poster: "https://res.cloudinary.com/dsijcu1om/image/upload/v1754123631/WhatsApp_Image_2025-06-08_at_15.07.46_zy3h4o.jpg",
+    bio: {
+      background: "Born and raised in a humble family of four siblings, in Ndago parish, Nyarushanje sub county Rukungiri district.",
+      education: "Social worker and health scientist graduated from Uganda Christian University, and University of the people in Pasadena California USA. Holds a certificate in human rights advocacy from Amnesty International Academy.",
+      currentRole: "CEO of Young Leaders Forever, a movement to champion and motivate young people to engage in leadership at every level. Currently serving as male Youth councillor for Nyarushanje sub county.",
+      interests: "Health science (epidemiology and pathology), social justice, and human rights."
+    }
+  },
+  
+  party: {
+    name: "PFF",
+    fullName: "People's Front for Freedom", 
+    logo: "https://res.cloudinary.com/dsijcu1om/image/upload/v1754123630/PPF_1_o24vph.jpg",
+    colors: {
+      primary: "hsl(220, 100%, 25%)", // Dark blue
+      secondary: "hsl(0, 0%, 100%)", // White
+      accent: "hsl(220, 15%, 85%)" // Light blue-gray
+    },
+    artwork: "https://res.cloudinary.com/dsijcu1om/image/upload/v1754123638/ChatGPT_Image_Jun_4_2025_01_16_46_PM_1_ymbb46.png"
   },
   
   campaign: {
@@ -49,7 +70,7 @@ export const campaignData = {
     {
       title: "Youth Economic Empowerment",
       icon: "TrendingUp",
-      color: "from-primary to-blue-600",
+      color: "from-primary to-blue-900",
       iconColor: "text-primary",
       initiatives: [
         "Job creation programs",
@@ -61,8 +82,8 @@ export const campaignData = {
     {
       title: "Education & Skills",
       icon: "GraduationCap",
-      color: "from-secondary to-purple-600",
-      iconColor: "text-secondary",
+      color: "from-blue-700 to-primary",
+      iconColor: "text-blue-700",
       initiatives: [
         "Digital literacy programs",
         "Vocational training",
@@ -73,8 +94,8 @@ export const campaignData = {
     {
       title: "Health & Wellbeing",
       icon: "Heart",
-      color: "from-green-500 to-green-600",
-      iconColor: "text-green-500",
+      color: "from-blue-600 to-blue-800",
+      iconColor: "text-blue-600",
       initiatives: [
         "Healthcare access",
         "Mental health support",
@@ -85,8 +106,8 @@ export const campaignData = {
     {
       title: "Civic Participation",
       icon: "Users",
-      color: "from-accent to-yellow-600",
-      iconColor: "text-accent",
+      color: "from-primary to-blue-700",
+      iconColor: "text-primary",
       initiatives: [
         "Leadership development",
         "Civic education",
@@ -97,8 +118,8 @@ export const campaignData = {
     {
       title: "Digital Transformation",
       icon: "Rocket",
-      color: "from-indigo-500 to-indigo-600",
-      iconColor: "text-indigo-500",
+      color: "from-blue-800 to-primary",
+      iconColor: "text-blue-800",
       initiatives: [
         "Internet connectivity",
         "Digital services",
@@ -117,56 +138,56 @@ export const campaignData = {
         description: "Youth town halls, stakeholder meetings, transport, refreshments",
         amount: 15000000,
         percentage: 25,
-        color: "from-primary to-blue-600"
+        color: "from-primary to-blue-800"
       },
       {
         category: "Transportation & Fuel",
         description: "Campaign travel across the Western Region",
         amount: 10000000,
         percentage: 17,
-        color: "from-secondary to-purple-600"
+        color: "from-blue-700 to-primary"
       },
       {
         category: "Campaign Materials",
         description: "Posters, banners, t-shirts, flyers, stickers",
         amount: 8000000,
         percentage: 13,
-        color: "from-accent to-yellow-600"
+        color: "from-blue-600 to-blue-800"
       },
       {
         category: "Media & Communications",
         description: "Radio talk shows, jingles, video production, social media",
         amount: 8000000,
         percentage: 13,
-        color: "from-green-500 to-green-600"
+        color: "from-primary to-blue-700"
       },
       {
         category: "Volunteer Mobilization",
         description: "Campaign team and political focal persons across the region",
         amount: 6000000,
         percentage: 10,
-        color: "from-indigo-500 to-indigo-600"
+        color: "from-blue-800 to-primary"
       },
       {
         category: "Legal & Compliance",
         description: "Nomination fees, legal advisory, regulatory filing",
         amount: 5000000,
         percentage: 8,
-        color: "from-pink-500 to-pink-600"
+        color: "from-blue-700 to-blue-900"
       },
       {
         category: "Contingency Fund",
         description: "For unexpected costs or opportunities",
         amount: 5000000,
         percentage: 8,
-        color: "from-red-500 to-red-600"
+        color: "from-primary to-blue-600"
       },
       {
         category: "Printing & Documentation",
         description: "Manifesto booklets, concept notes, proposal packages",
         amount: 3000000,
         percentage: 5,
-        color: "from-teal-500 to-teal-600"
+        color: "from-blue-600 to-primary"
       }
     ]
   },
