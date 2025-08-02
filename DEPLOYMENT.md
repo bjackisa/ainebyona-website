@@ -72,8 +72,10 @@
 **Configure on Vercel Dashboard:**
 - Framework Preset: **Vite**
 - Root Directory: `./`
-- Build Command: `cd client && npm run build`
+- Build Command: `npm run build`
 - Output Directory: `dist/public`
+
+**IMPORTANT:** Make sure these settings are EXACTLY as shown above.
 
 ### Option 2: Deploy Full-Stack (More Complex, Probably Overkill)
 
@@ -112,33 +114,83 @@
 - It's professional and fast
 - Zero hosting costs
 
-## Quick Deployment Steps (Static Site)
+## CORRECTED Deployment Steps (Static Site)
 
-1. **Test build locally:**
+### The White Screen Issue Fix:
+
+**If you got a white screen, here's what went wrong and how to fix it:**
+
+1. **Test build locally first:**
    ```bash
    npm run build
-   # Check dist/public folder is created with files
+   ls -la dist/public/  # Should show index.html and assets folder
    ```
 
-2. **Deploy to Vercel:**
+2. **Redeploy with CORRECT settings:**
+   
+   **Via Vercel Dashboard (RECOMMENDED):**
+   - Go to your project on vercel.com
+   - Settings → General → Build & Output Settings
+   - Framework Preset: **Vite** 
+   - Build Command: `npm run build`
+   - Output Directory: `dist/public`
+   - Root Directory: `./` (leave empty or set to root)
+   - Install Command: `npm install`
+   
+3. **Redeploy:**
+   - Go to Deployments tab
+   - Click "..." on latest deployment → "Redeploy"
+   - Wait for new deployment
+
+### Via CLI (Alternative):
+```bash
+# Delete previous deployment
+vercel --prod
+# When prompted:
+# Framework: Vite
+# Output directory: dist/public
+# Build command: npm run build
+```
+
+## Troubleshooting White Screen
+
+**Common causes and fixes:**
+
+1. **Wrong Output Directory:**
+   - ❌ `dist` → ✅ `dist/public`
+   - ❌ `build` → ✅ `dist/public`
+
+2. **Wrong Build Command:**
+   - ❌ `vite build` → ✅ `npm run build`
+   - ❌ `cd client && vite build` → ✅ `npm run build`
+
+3. **Check Vercel Build Logs:**
+   - Go to Deployments → Click on failed deployment
+   - Check "Build Logs" for errors
+   - Look for "Build completed" message
+
+4. **Verify Build Output Locally:**
    ```bash
-   npx vercel
-   # Follow prompts, use dist/public as output directory
+   npm run build
+   ls -la dist/public/
+   # Should show:
+   # index.html
+   # assets/
    ```
 
-3. **Or use GitHub:**
-   - Push code to GitHub
-   - Connect repository on vercel.com
-   - Set output directory to `dist/public`
+5. **Check Browser Console:**
+   - Open your deployed site
+   - Press F12 → Console tab
+   - Look for JavaScript errors
 
 ## Pre-Deployment Checklist
 
+- [ ] `npm run build` works locally
+- [ ] `dist/public/index.html` exists after build
+- [ ] `dist/public/assets/` folder contains CSS and JS files
 - [ ] All Cloudinary image URLs working
-- [ ] Test `npm run build` works locally
-- [ ] All pages load correctly
-- [ ] Donation form generates reference codes
-- [ ] Mobile responsive design tested
-- [ ] Contact information verified
+- [ ] Vercel settings: Output Directory = `dist/public`
+- [ ] Vercel settings: Build Command = `npm run build`
 
 ## Post-Deployment Reality
 
