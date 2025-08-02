@@ -73,10 +73,11 @@ export const campaignData = {
       color: "from-primary to-blue-900",
       iconColor: "text-primary",
       initiatives: [
-        "Job creation programs",
-        "Entrepreneurship support", 
-        "Access to capital",
-        "Skills development"
+        "Establish youth entrepreneurship funds with accessible micro-credit schemes",
+        "Create agricultural value chain programs connecting youth farmers to markets",
+        "Develop cooperative societies for collective bargaining and resource sharing",
+        "Launch skills-to-jobs matching platforms linking training to employment",
+        "Implement youth business incubation centers in every district"
       ]
     },
     {
@@ -85,10 +86,11 @@ export const campaignData = {
       color: "from-blue-700 to-primary",
       iconColor: "text-blue-700",
       initiatives: [
-        "Digital literacy programs",
-        "Vocational training",
-        "Higher education access",
-        "Professional certification"
+        "Establish technical and vocational institutes with modern equipment",
+        "Create scholarship programs targeting disadvantaged but talented youth",
+        "Develop partnership programs with universities for practical training",
+        "Launch digital literacy campaigns in rural communities",
+        "Implement mentorship programs pairing youth with industry professionals"
       ]
     },
     {
@@ -97,10 +99,11 @@ export const campaignData = {
       color: "from-blue-600 to-blue-800",
       iconColor: "text-blue-600",
       initiatives: [
-        "Healthcare access",
-        "Mental health support",
-        "Sports & recreation",
-        "Preventive care"
+        "Establish youth-friendly health centers with confidential services",
+        "Launch comprehensive reproductive health education programs",
+        "Create mental health support networks and counseling services",
+        "Develop sports facilities and recreational centers in communities",
+        "Implement substance abuse prevention and treatment programs"
       ]
     },
     {
@@ -109,10 +112,11 @@ export const campaignData = {
       color: "from-primary to-blue-700",
       iconColor: "text-primary",
       initiatives: [
-        "Leadership development",
-        "Civic education",
-        "Youth advocacy",
-        "Community service"
+        "Strengthen National Youth Council structures at all levels",
+        "Create youth leadership academies with governance training",
+        "Establish youth forums for policy dialogue and advocacy",
+        "Promote youth participation in local government structures",
+        "Develop civic education programs in schools and communities"
       ]
     },
     {
@@ -121,10 +125,11 @@ export const campaignData = {
       color: "from-blue-800 to-primary",
       iconColor: "text-blue-800",
       initiatives: [
-        "Internet connectivity",
-        "Digital services",
-        "Tech innovation",
-        "E-governance"
+        "Expand internet connectivity to underserved rural areas",
+        "Create digital innovation hubs with modern technology access",
+        "Launch e-governance platforms for efficient service delivery",
+        "Implement digital payment systems for youth enterprises",
+        "Develop online platforms for youth networking and collaboration"
       ]
     }
   ],
